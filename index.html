@@ -7,7 +7,7 @@
         </style>
         <script>
             
-            var timeWord = ["A week", "A year", "A day", "A few days", "A few years", "A few weeks", "Yesterday", "Today"];
+            var timeWord = ["A week ago", "A year ago", "A day ago", "A few days ago", "A few years ago", "A few weeks ago", "Yesterday", "Today"];
             var randomEvent = ["grocery shopping", "getting a coffee", "running late for work", "taking my kids to school"];
             var sadPerson = ["a homeless person", "a dirty dog", "a family of beggars", "an ex-boss of mine", "an old coworker of mine"];
             var sadEvent = ["trying to come up with the change to afford a purchase", "begging for spare change", "looking for food to eat", "asking everyone for a job"];
@@ -17,7 +17,7 @@
             var randomQuote = ["Goodness is its own reward", "Be the change that you wish to see in the world", "We accept the love we think we deserve", "We are all in the gutter, but some of us are looking at the stars", "It is never too late to be what you might have been", "Life isn't about finding yourself. Life is about creating yourself"];
 
             function GeneratePost() {
-                return timeWord[timeWord.length * Math.random() | 0] + " ago, I was " + randomEvent[randomEvent.length * Math.random() | 0] + ", when I saw " + sadPerson[sadPerson.length * Math.random() | 0] + " was " + sadEvent[sadEvent.length * Math.random() | 0] + ". After" + " they were " + goodThingForPerson[goodThingForPerson.length * Math.random() | 0] + ", they " + goodEvent[goodEvent.length * Math.random() | 0] + ". I learned that day " + moralLesson[moralLesson.length * Math.random() | 0] + ".";
+                return timeWord[timeWord.length * Math.random() | 0] + " , I was " + randomEvent[randomEvent.length * Math.random() | 0] + ", when I saw " + sadPerson[sadPerson.length * Math.random() | 0] + " was " + sadEvent[sadEvent.length * Math.random() | 0] + ". After" + " they were " + goodThingForPerson[goodThingForPerson.length * Math.random() | 0] + ", they " + goodEvent[goodEvent.length * Math.random() | 0] + ". I learned that day " + moralLesson[moralLesson.length * Math.random() | 0] + ".";
             }
             i
             function GenerateQuote(){
@@ -31,7 +31,7 @@
             <h1 style="padding: 50px">LinkedIn Post Generator</h1>
         </div>
     
-        <div>
+        <div id="entire-post">
             <p id="generated-post"></p>
             <p id="generated-quote"></p>
         </div>
