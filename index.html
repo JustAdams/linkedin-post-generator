@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <style type="text/css">
             body { background-color: #EfEfEf; padding: 10%; text-align: center; }
@@ -7,7 +8,6 @@
             button { padding: 10px; border-radius: 10px; }
         </style>
         <script>
-            
             var timeWord = ["A week ago", "A year ago", "A day ago", "A few days ago", "A few years ago", "A few weeks ago", "Yesterday", "Today"];
             var randomEvent = ["grocery shopping", "getting a coffee", "running late for work", "taking my kids to school"];
             var sadPerson = ["a homeless person", "a dirty dog", "a family of beggars", "an ex-boss of mine", "an old coworker of mine"];
@@ -20,23 +20,24 @@
             function GeneratePost() {
                 return timeWord[timeWord.length * Math.random() | 0] + ", I was " + randomEvent[randomEvent.length * Math.random() | 0] + ", when I saw that " + sadPerson[sadPerson.length * Math.random() | 0] + " was " + sadEvent[sadEvent.length * Math.random() | 0] + ". After" + " they were " + goodThingForPerson[goodThingForPerson.length * Math.random() | 0] + ", they " + goodEvent[goodEvent.length * Math.random() | 0] + ". I learned that day " + moralLesson[moralLesson.length * Math.random() | 0] + ".";
             }
-            
+
             function GenerateQuote(){
         return "'" + randomQuote[randomQuote.length * Math.random() | 0] + "'!"
             }
-
         </script>
     </head>
+
     <body>
         <div>
             <h1 style="padding: 50px">LinkedIn Post Generator</h1>
-            <hr />
         </div>
     
         <div id="entire-post">
             <p id="generated-post"></p>
             <p id="generated-quote"></p>
+            <hr />
         </div>
+
 
         <div>
             <button onclick="document.getElementById('generated-post').innerHTML = GeneratePost(); document.getElementById('generated-quote').innerHTML = GenerateQuote();">Generate New Post</button>
@@ -47,4 +48,5 @@
         </div>
 
     </body>
+
 </html>
